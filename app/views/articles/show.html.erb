@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= @article.title %>
-</p>
+<div class= 'article'>
+	<h1 class="title"><%= @article.title%></h1>
+	<div class= 'img-article'>
+	  <%= image_tag @article.header_image, class: 'style_image'%>
+	</div>
 
-<p>
-  
-  <%= @article.text %>
-</p>
+	<p class="container"><%= @article.text%></p>
+	
+	<div class="nav-links">
+		<span><%= link_to 'Edit', edit_article_path(@article) %></span> |
+		<span><%= link_to 'Back', articles_path %></span>
+	</div>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+</div>
