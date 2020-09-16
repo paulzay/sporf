@@ -4,7 +4,13 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    cate = params[:cate]
+    
+    if !cate.nil?
+      @articles = Article.where(:category_id => cate)
+    else
+      @articles = Article.all.order("created_at DESC")
+    end
   end
 
   # GET /articles/1
@@ -59,6 +65,16 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @article = Article.find(params[:id])
+    @article.upvote_from current_user
+  end
+
+  def downvote
+    @article = Article.find(params[:id])
+    @article.downvote_from current_user
   end
 
   private

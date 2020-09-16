@@ -17,3 +17,19 @@
 	text-decoration: none;
 	color: #000;
 }
+.cats{
+
+	li{
+		text-decoration: none;
+		list-style: none;
+		margin-top: 20px;
+		a{
+			font-size: 14px;
+			font-weight: 400;
+			&:hover{
+				background-color: transparent;
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -3,8 +3,14 @@
     <div class="navbar-header">
       <%= link_to "Sporf", class: "mx-2" %>
     </div>
+     <% Category.all.each do |category|%>
+      <ul class="cats">
+          <li><%= link_to category.name, articles_path(:cate => category.id), class: 'links' %></li>
+      </ul>
+    <% end %>
     <% if logged_in? %>
       <ul class="nav navbar-right ">
+        <%= link_to 'New Article', new_article_path %>
         <li><%= link_to "Log out", logout_path, class: "mx-2", method: :delete %></li> 
       </ul>
     <% else %>
