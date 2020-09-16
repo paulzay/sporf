@@ -1,16 +1,16 @@
 <div class="articles">
   <% @articles.each do |article| %>
     <div class= 'article'>
-        <div id="reverse" class= 'reverse'>
-          
+        <div class= 'image'>
+          <%= image_tag article.header_image, class: 'imae'%>
         </div>
         <div class="words">
           <h2><%= article.category.name %></h2>
-          <h5 class="card-text font-weight bold"><%= article.title %></h5>
-          <p class="card-text"><%= truncate(article.text, length: 50) %></p>
+          <h3><%= article.title %></h3>
+          <p class="card-text"><%= truncate(article.text, length: 130) %></p>
         
           <p>
-          <%= link_to 'Read more', article_path(article), id: 'readmore' %>
+          <%= link_to 'Read more', article_path(article), class: 'readmore' %>
           </p>
         </div>
     </div>
