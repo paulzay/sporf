@@ -1,11 +1,15 @@
-<div class = 'container-fluid'>
-  <div class= 'row'>
-    <div class= 'col sm-12 main-img p-0'>
-      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'img') %> 
-      <div class="bottom-left-main">
-      <h6 id= 'current' class= 'font-weight-bold ml-3'><%= @liked_article.title ? @liked_article.title : '' %></h6>
-      <p class= 'text-white font-weight-bold ml-3'><%= @liked_article.text ? @liked_article.text : '' %></p>
-      </div> 
-    </div>
-  </div>
+
+<div class="art-1">
+  <h3>Most Popular</h3>
+
+  <% popular = Vote.popular %>
+  <% popular.each do |vote| %>
+    <%= vote.article.title %>
+  <% end %>
+</div>
+<div class="cat-foots">
+  <div class="cat1"></div>
+  <div class="cat2"></div>
+  <div class="cat3"></div>
+  <div class="cat4"></div>
 </div>
