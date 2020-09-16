@@ -8,15 +8,15 @@
 
 	<p class="container"><%= @article.text%></p>
 	<div>
-		<%= link_to like_article_path(@article), method: :put do %>
-			Like
-	<%= @article.get_upvotes.size %>
-	<% end %>
-	<%= link_to unlike_article_path(@article), method: :put do %>
-			Dislike
-	<%= @article.get_downvotes.size %>
-	<% end %>
-			
+
+		<p><%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'Like' : 'Likes'%></p>
+	
+		<% pre_vote = @article.votes.find { |vote| vote.user_id == current_user.id} %>
+		<% if pre_vote %>
+		  <%= button_to 'Unlike', article_vote_path(@article, pre_vote), method: :delete %>
+		<% else %>
+		  <%= button_to 'Like', article_votes_path(@article), method: :post %>
+		<% end %>	
 	</div>
 	<div class="nav-links">
 		<span><%= link_to 'Edit', edit_article_path(@article) %></span> |
