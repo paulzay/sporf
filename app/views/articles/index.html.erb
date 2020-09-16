@@ -1,18 +1,22 @@
 <div class="articles">
-  <% @articles.each do |article| %>
-    <div class= 'article'>
-        <div class= 'image'>
-          <%= image_tag article.header_image, class: 'imae'%>
+<% @articles.each do |article| %>
+  <div class="card mb-0 border-0" style="width: 50%">
+    
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <%= image_tag article.header_image, class: 'card-img'%>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <h5 class="card-title font-weight-bold"><%= article.category.name %></h5>
+          <h4 class='card-text font-weight-bold'><%= article.title %></h4>
+          <p class="card-text text-truncate"><%= article.text %></p>
+          <p class="card-text"><small class="text-muted"><%= link_to 'Read more', article_path(article), class: 'readmore' %></small></p>
         </div>
-        <div class="words">
-          <h2><%= article.category.name %></h2>
-          <h3><%= article.title %></h3>
-          <p class="card-text"><%= truncate(article.text, length: 130) %></p>
-        
-          <p>
-          <%= link_to 'Read more', article_path(article), class: 'readmore' %>
-          </p>
-        </div>
+      </div>
     </div>
+    
+  </div>
   <% end %>
 </div>
