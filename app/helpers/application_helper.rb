@@ -1,5 +1,5 @@
 module ApplicationHelper
-	def categories
-	  Category.all.map { |c| [ c.name, c.id ] }
-	end
+  def categories
+    Category.all.map { |c| [c.name, c.id] }
+  end
 end

@@ -1,29 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
+<div class="articles">
+  <% @articles.each do |article| %>
+    <div class= 'article'>
+        <div id="reverse" class= 'reverse'>
+          
+        </div>
+        <div class="words">
+          <h2><%= article.category.name %></h2>
+          <h5 class="card-text font-weight bold"><%= article.title %></h5>
+          <p class="card-text"><%= truncate(article.text, length: 50) %></p>
+        
+          <p>
+          <%= link_to 'Read more', article_path(article), id: 'readmore' %>
+          </p>
+        </div>
+    </div>
+  <% end %>
+</div>
