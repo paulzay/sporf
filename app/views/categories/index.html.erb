@@ -1,27 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+<div class = 'container-fluid'>
+  <div class= 'row'>
+    <div class= 'col sm-12 main-img p-0'>
+      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'img') %> 
+      <div class="bottom-left-main">
+      <h6 id= 'current' class= 'font-weight-bold ml-3'><%= @liked_article.title ? @liked_article.title : '' %></h6>
+      <p class= 'text-white font-weight-bold ml-3'><%= @liked_article.text ? @liked_article.text : '' %></p>
+      </div> 
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    @liked_article = Article.highest_vote.first
   end
 
   # GET /categories/1
