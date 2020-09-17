@@ -10,7 +10,7 @@
     <% end %>
     <% if logged_in? %>
       <ul class="nav navbar-right ">
-        <%= link_to 'New Article', new_article_path %>
+        <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
         <li><%= link_to "Log out", logout_path, class: "mx-2", method: :delete %></li> 
       </ul>
     <% else %>

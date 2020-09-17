@@ -15,10 +15,24 @@
 .art-1{
 	height: 60vh;
 }
-.cat-foots{
-	background-color: #333;
+.cat-foot{
+  display: flex;
+  flex-direction: row !important;
+  align-items: flex-start;
+  flex-wrap: wrap;
 	height: 30vh;
 	.cats{
-	
+		
 	}
+}
+.categories{
+	display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  .catext{
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+  }
 }
