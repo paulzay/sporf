@@ -13,21 +13,21 @@
 
   <div class='form-group'>
     <%= form.label :header_image %>
-    <%= form.file_field :header_image, class: 'form-control' %>
+    <%= form.file_field :header_image, class: "form-control-file" %>
   </div>
   
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.text_field :text, class: "form-control"%>
   </div>
 
  <div class="form-group">
-    <%= form.select :category_id, Category.all.map {|c| [c.name, c.id]} %>
+    <%= form.select :category_id, Category.all.map {|c| [c.name, c.id]}, class: "form-control" %>
   </div>
 
   <div class="actions">
