@@ -9,34 +9,10 @@
   </div>
   <% end %>
 </div>
-
 <div class="categories">
   <% articles = Category.includes(:most_recent_article).all %>
   <% articles.each do |article| %>
-  <div class="card mb-0 border-0" style="width: 15%;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"><%= article.name %></h5>
-        <p class="card-text"><%= article.most_recent_article&.title %></p>
-  
-      </div>
-    </div>
-  </div>
-</div>
-  <% end %>
-</div>
-
-
-
-
-<div class="categories">
-  <% articles = Category.includes(:most_recent_article).all %>
-  <% articles.each do |article| %>
-  <div class="card bg-dark border-0" text-white style="width: 16%;">
+  <div class="card bg-dark border-0" text-white style="width: 16.66%;">
 
   <%= image_tag article.most_recent_article&.header_image, class: "card-img" %>
   <div class="card-img-overlay border-0 catext">
