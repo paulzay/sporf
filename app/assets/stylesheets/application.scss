@@ -47,3 +47,43 @@ a {
     }
   }
 }
+
+.footer{
+.logo{
+  a{
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;  
+  }
+}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background-color: #4E443E;
+  color: #fff;
+  .first{
+    ul{
+    display: flex;
+    li{
+      list-style: none;
+      margin-left: 10px;
+      a{
+      color: orangered;
+      }
+    }
+    }
+  }
+    .second{
+    ul{
+    display: flex;
+    li{
+      list-style: none;
+      margin-left: 10px;
+      a{
+      color: orangered;
+      }
+    }
+    }
+  }
+}
