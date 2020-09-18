@@ -4,7 +4,7 @@ class Article < ApplicationRecord
   belongs_to :category
   has_many :votes, dependent: :destroy
 
-  scope :most_recent_by_category, -> do
+  scope :most_recent_by_category, lambda {
     from(
       <<~SQL
         (
@@ -19,7 +19,5 @@ class Article < ApplicationRecord
         ) articles
       SQL
     )
-  end
+  }
 end
-
- 
