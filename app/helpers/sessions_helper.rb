@@ -28,4 +28,11 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
   end
+
+  def auth_user
+    return if logged_in?
+
+    flash[:notice] = 'Login to proceed'
+    redirect_to root_path
+  end
 end
