@@ -22,7 +22,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @user = User.find(params[:id])
+  end
 
   def update; end
 
@@ -32,5 +34,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name)
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 end
