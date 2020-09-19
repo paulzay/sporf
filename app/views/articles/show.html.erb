@@ -10,7 +10,12 @@
 		<%= like_dislike_btn %>
 	</div>
 	<div class="nav-links">
+		<% if current_user?(@article.author) %>
 		<span><%= link_to 'Edit', edit_article_path(@article) %></span> |
+			<span><%= link_to "Delete", @article, method: :delete,
+			data: { confirm: "You sure?" } %></span>
+		<% end %>
+		
 	</div>
 
 </div>
