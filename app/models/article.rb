@@ -4,6 +4,8 @@ class Article < ApplicationRecord
   belongs_to :category
   has_many :votes, dependent: :destroy
 
+  validates_presence_of :author, :text, :title, :category, :header_image
+
   scope :most_recent_by_category, lambda {
     from(
       <<~SQL
