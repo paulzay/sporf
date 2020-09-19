@@ -36,17 +36,21 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'acts_as_votable'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'faker', '~> 2.14'
 gem 'font-awesome-sass'
-
+gem 'gravatar_image_tag', '~> 1.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'database_cleaner'
+  gem 'factory_bot'
+  gem 'factory_bot_rails'
+  gem 'factory_girl_rails'
+  gem 'headless'
+  gem 'poltergeist'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.6'
-	gem 'factory_girl_rails'
-	gem 'rails-controller-testing'
-	gem 'headless'
-	gem 'poltergeist'
-	gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 group :development do
