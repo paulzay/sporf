@@ -59,10 +59,13 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article.destroy
     respond_to do |format|
+    if @article.destroy
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
+    else
+      format.html { redirect_to @article }
+      format.json { render json: @article.errors, status: :unprocessable_entity }
     end
   end
 
