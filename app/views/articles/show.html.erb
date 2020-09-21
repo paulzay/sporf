@@ -8,15 +8,22 @@
 	<p class="container"><%= @article.text%></p>
 	<div class="likes">
 		<p><%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'Like' : 'Likes'%></p>
-		<%= like_dislike_btn %>
+		<% if logged_in? %>
+			<%= like_dislike_btn %>
+		<% end %>
+	</div>
+	<div>
+		<p>
+		  Tags:
+		  <% @article.tags.each do |tag| %>
+		    <%= link_to tag.name, tag_path(tag) %>
+		  <% end %>
+		</p>
 	</div>
 	<div class="nav-links">
-		<% if current_user?(@article.author) %>
-		<span><%= link_to 'Edit', edit_article_path(@article) %></span> |
-			<span><%= link_to "Delete", @article, method: :delete,
-			data: { confirm: "You sure?" } %></span>
-		<% end %>
-		
+		<span><%= edit_btn(current_user)%><span>
+		<span><%= destroy_btn(current_user)%></span>
 	</div>
 
 </div>
+ 
