@@ -21,8 +21,10 @@ module ArticlesHelper
 
   def recent_article
     articles = Category.includes(:most_recent_article).all
+    articles
   end
+
   def vote_count
-    (@article.votes.count) == 1 ? 'Like' : 'Likes'
+    @article.votes.count == 1 ? 'Like' : 'Likes'
   end
 end
