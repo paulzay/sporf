@@ -2,26 +2,11 @@
 
 > This is a website for writing sports-related articles based on the different categories given.
 
-## Requirements
-
-1. The user logs in to the app, only by typing the username (a proper authenticated login is **not** a requirement).
-2. The user is presented with the homepage (see the _Homepage_ screenshot above) that includes:
-   1. Featured article with full-width image and title in the first row. This should be an article with the biggest number of votes. _Skip the carousel widget and weather and city information._
-   2. List of all categories in order of priority. Each category should be displayed as a square with its name on the top and its most recent article's title in the bottom. The background image should be the image of the most recent article in this category.
-3. When the user clicks the category name they can see all articles in that category (see the _Articles in selected category page_ screenshot above):
-   1. Articles are sorted by most recent.
-   2. Each article displays: image, title, truncated text as preview and its **author name**.
-   3. Skip the _Read more_ link implementation.
-   4. Add extra button to add a vote for article (each user can vote only once).
-4. Each page should use the same top menu and footer:
-   1. Top menu is presented at the _Homepage_ screenshot above. It should include only links to pages that are implemented: _Home_ and _Write an article_.
-   2. Footer is presented at the _Articles in selected category page_ screenshot above.
-5. When user opens "_Write an article_" page:
-   1. A form with all necessary fields is displayed.
-
-## ERD
-
-![ERD__articles](https://user-images.githubusercontent.com/29974825/93708718-2dea5780-fb41-11ea-8de5-6970c6a3c5ef.png)
+## Project Features
+- The index page contains the most popular article based on votes by the users. Additionally it displays the most recent article in each category. 
+- A user can create an account and begin writing their own articles and vote on their own article or others'. 
+- A user needs to be logged in to vote on articles
+- 
 
 ## Built With
 
@@ -66,10 +51,13 @@ $ cd sporf
 # run bundle install to get the gems
 $ bundle install
 
-# Run the migrations
-$ rake db:migrate
+# Create the database
+$ rails db:create
 
-# Seed user data
+# Run the migrations
+$ rails db:migrate
+
+# Seed user and category data
 $ rails db:seed
 
 # To start the rails server, run
