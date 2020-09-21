@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ 
  */
 
 // html {
@@ -23,7 +24,7 @@
 //   padding-bottom: [footer-height];
 // }
 
-* li{
+* li {
   list-style: none;
 }
 #notice {
@@ -58,8 +59,8 @@ a {
         text-decoration: none;
         color: orangered;
       }
-      &:active{
-      color: orangered;
+      &:active {
+        color: orangered;
       }
     }
   }
@@ -111,18 +112,18 @@ a {
     }
   }
 }
-nav{
-.navbar-right{
-  a{
-  margin-left: 10px;
-  &:hover{
-  text-decoration: none;
-  color: orangered;
+nav {
+  .navbar-right {
+    a {
+      margin-left: 10px;
+      &:hover {
+        text-decoration: none;
+        color: orangered;
+      }
+    }
   }
-  }
-}
-  a{
-  font-weight: bold;
-  font-size: 18px;
+  a {
+    font-weight: bold;
+    font-size: 18px;
   }
 }
