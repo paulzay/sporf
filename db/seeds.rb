@@ -12,3 +12,10 @@ User.create!(name: "Superman",
 	User.create!(name: name,
 	)
 end
+
+Category.create(name: 'Football')
+Category.create(name: 'Tennis')
+Category.create(name: 'Hockey')
+Category.create(name: 'Basketball')
+Category.create(name: 'Rugby')
+Category.create(name: 'Cricket')
