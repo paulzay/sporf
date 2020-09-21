@@ -57,6 +57,13 @@ GEM
       faraday (~> 0.9)
       faraday_middleware (~> 0.10)
       nokogiri (~> 1.6, >= 1.6.8)
+    azure-storage-blob (1.1.0)
+      azure-core (~> 0.1.13)
+      azure-storage-common (~> 1.0)
+      nokogiri (~> 1.6, >= 1.6.8)
+    azure-storage-common (1.1.0)
+      azure-core (~> 0.1.13)
+      nokogiri (~> 1.6, >= 1.6.8)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -264,6 +271,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable
   azure-storage
+  azure-storage-blob
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)

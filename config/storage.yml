@@ -25,9 +25,9 @@ local:
 # microsoft:
 azure:
   service: AzureStorage
-  storage_account_name: <%= ENV['STORAGE_ACCOUNT_NAME'] %>
-  storage_access_key: <%= ENV['STORAGE_ACCESS_KEY'] %>
-  container: <%= ENV['STORAGE_CONTAINER'] %>
+  storage_account_name: <%= ENV['AZURE_STORAGE_ACCOUNT_NAME'] %>
+  storage_access_key: <%= ENV['AZURE_STORAGE_ACCESS_KEY'] %>
+  container: <%= ENV['AZURE_STORAGE_CONTAINER'] %>
 
 # mirror:
 #   service: Mirror
