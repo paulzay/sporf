@@ -1,7 +1,7 @@
 <nav class="navbar mb-2">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to 'SPORF', root_path %>
+      <%= link_to 'SPORF', root_path , class: "lnk"%>
     </div>
      <% Category.all.each do |category|%>
       <ul class="cats">
@@ -10,14 +10,14 @@
     <% end %>
     <% if logged_in? %>
       <ul class="nav navbar-right ">
-        <li class=""> <%= admin_btn(current_user) %></li>
-        <li><%= link_to 'New Article', new_article_path %></li>
-        <li><%= link_to "Log out", logout_path, class: "mx-2", method: :delete %></li> 
+        <li class="lnk"> <%= admin_btn(current_user) %></li>
+        <li><%= link_to 'New Article', new_article_path, class: "lnk" %></li>
+        <li><%= link_to "Log out", logout_path, class: "lnk", method: :delete %></li> 
       </ul>
     <% else %>
       <ul class="nav navbar-right ">
-        <li><%= link_to "Log in", login_path, class: "mx-2" %></li> 
-        <li><%= link_to "Sign up", signup_path, class: "mx-2" %></li>
+        <li><%= link_to "Log in", login_path, class: "lnk" %></li> 
+        <li><%= link_to "Sign up", signup_path, class: "lnk" %></li>
       </ul>
     <% end %>
   </div>

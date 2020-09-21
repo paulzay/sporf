@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- 
+
  */
 
 // html {
@@ -27,10 +27,13 @@
 * li {
   list-style: none;
 }
+
 #notice {
   color: green;
 }
+
 a {
+  text-decoration: none;
   color: #000;
 
   &:visited {
@@ -42,23 +45,23 @@ a {
     background-color: transparent;
   }
 }
-* a {
-  text-decoration: none;
-  color: #000;
-}
+
 .cats {
   li {
     text-decoration: none;
     list-style: none;
     margin-top: 16px;
+
     a {
       font-size: 16px;
       font-weight: 600;
+
       &:hover {
         background-color: transparent;
         text-decoration: none;
         color: orangered;
       }
+
       &:active {
         color: orangered;
       }
@@ -68,11 +71,9 @@ a {
 
 .footer {
   .logo {
-    a {
-      color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-    }
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
   }
 
   // position: absolute;
@@ -87,24 +88,30 @@ a {
   padding: 30px 20px;
   background-color: #4e443e;
   color: #fff;
+
   .first {
     ul {
       display: flex;
+
       li {
         list-style: none;
         margin-left: 10px;
+
         a {
           color: orangered;
         }
       }
     }
   }
+
   .second {
     ul {
       display: flex;
+
       li {
         list-style: none;
         margin-left: 10px;
+
         a {
           color: orangered;
         }
@@ -112,18 +119,23 @@ a {
     }
   }
 }
+
 nav {
+  .lnk {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
   .navbar-right {
-    a {
+    .lnk {
       margin-left: 10px;
+      font-weight: bold;
+      font-size: 18px;
+
       &:hover {
         text-decoration: none;
         color: orangered;
       }
     }
-  }
-  a {
-    font-weight: bold;
-    font-size: 18px;
   }
 }

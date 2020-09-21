@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .cat {
   height: 60vh;
+
   .card-title {
     color: orangered;
   }
+
   .texts {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
     .card-title {
       font-size: 30px;
     }
@@ -27,22 +30,25 @@
   justify-content: center;
   height: 30vh;
   width: 100%;
-  flex-wrap: no-wrap;
+
   .card-img {
     height: 100%;
     filter: brightness(50%);
   }
+
   .catext {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #fff;
+
     .card-title {
       font-weight: 600;
       font-size: 22px;
       text-decoration: underline;
       text-decoration-color: yellow;
     }
+
     .card-text {
       font-size: 12px;
     }
