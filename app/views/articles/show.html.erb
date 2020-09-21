@@ -7,7 +7,7 @@
 
 	<p class="container"><%= @article.text%></p>
 	<div class="likes">
-		<p><%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'Like' : 'Likes'%></p>
+		<p><%= @article.votes.count %> <%= vote_count %></p>
 		<% if logged_in? %>
 			<%= like_dislike_btn %>
 		<% end %>

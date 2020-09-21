@@ -10,8 +10,8 @@
   <% end %>
 </div>
 <div class="categories">
-  <% articles = Category.includes(:most_recent_article).all %>
-  <% articles.each do |article| %>
+  
+  <% recent_article.each do |article| %>
   <div class="card bg-dark border-0" text-white style="width: 16.66%;">
 
   <%= image_tag article.most_recent_article&.header_image, class: "card-img" %>

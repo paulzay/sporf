@@ -18,4 +18,11 @@ module ArticlesHelper
     link_to 'Delete', @article, method: :delete,
                                 data: { confirm: 'You sure?' }
   end
+
+  def recent_article
+    articles = Category.includes(:most_recent_article).all
+  end
+  def vote_count
+    (article.votes.count) == 1 ? 'Like' : 'Likes'
+  end
 end
