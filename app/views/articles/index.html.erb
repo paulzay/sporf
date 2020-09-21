@@ -16,7 +16,7 @@
           <p class="card-text"><small class="text-muted"><%= link_to 'Read more', article_path(article), class: 'readmore' %></small></p>
           <div>
 
-        <p><%= @article.votes.count %> <%= vote_count %></p>
+        <p><%= article.votes.count %> <%= (article.votes.count) == 1 ? 'Like' : 'Likes'%></p>
       
       </div>
         </div>
