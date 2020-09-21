@@ -7,4 +7,15 @@ module ArticlesHelper
       button_to 'Like', article_votes_path(@article), method: :post, class: 'btn btn-secondary'
     end
   end
+
+  def edit_btn(_user)
+    link_to 'Edit', edit_article_path(@article) if current_user?(@article.author)
+  end
+
+  def destroy_btn(_user)
+    return unless current_user?(@article.author)
+
+    link_to 'Delete', @article, method: :delete,
+                                data: { confirm: 'You sure?' }
+  end
 end
