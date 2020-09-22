@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create!(name: "Superman",
+	admin: true)
+50.times do |n|
+	name = Faker::Name.name
+	User.create!(name: name,
+	)
+end
+
+Category.create(name: 'Football')
+Category.create(name: 'Tennis')
+Category.create(name: 'Hockey')
+Category.create(name: 'Basketball')
+Category.create(name: 'Rugby')
+Category.create(name: 'Cricket')

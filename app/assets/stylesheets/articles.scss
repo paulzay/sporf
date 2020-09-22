@@ -1,0 +1,116 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-top: 2em;
+    font-size: 21px;
+  }
+
+  .likes {
+    display: flex;
+
+    p {
+      vertical-align: middle;
+    }
+  }
+
+  h1 {
+    line-height: 60px;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  .style_image {
+    margin-top: 2em;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+
+    span {
+      margin-left: 10px;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          color: red;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .card-img {
+    height: 100%;
+  }
+
+  .card-body {
+    .card-title {
+      color: orangered;
+      text-decoration: underline;
+      text-decoration-color: orangered;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .readmore {
+      color: orangered;
+      // position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .article {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+    .image {
+      width: 50%;
+
+      .imae {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .words {
+      padding: 20px;
+      width: 50%;
+
+      h2 {
+        font-weight: 600;
+        color: orangered;
+        text-decoration: underline;
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 38px;
+        font-weight: bold;
+      }
+    }
+
+    .readmore {
+      color: orangered;
+      // position: absolute;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<%= form_with(model: article, local: true,class: "login container") do |form| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='form-group'>
+    <%= form.label :header_image %>
+    <%= form.file_field :header_image, class: "form-control-file" ,required: true %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control",required: true, 
+                    minlength: 5,
+                    maxlength: 100 %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :text %>
+    <%= form.text_field :text, class: "form-control",required: true, 
+                    minlength: 100,
+                    maxlength: 800%>
+  </div>
+
+ <div class="form-group">
+    <%= form.select :category_id, Category.all.map {|c| [c.name, c.id]}, class: "form-control" %>
+  </div>
+  <div>
+    <p>
+    <%= form.label :tag_list %><br />
+    <%= form.text_field :tag_list , class: "form-control"%>
+  </p>
+</div class="form-group">
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

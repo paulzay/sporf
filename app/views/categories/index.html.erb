@@ -1,0 +1,28 @@
+<div class="card bg-dark text-white cat">
+  <% popular = Vote.popular %>
+  <% popular.each do |vote| %>
+  <%= image_tag vote.article.header_image, class: "card-img art-1 " %>
+  <div class="card-img-overlay texts">
+    <h5 class="card-title font-weight-bold "><%= vote.article.title %></h5>
+    <p class="card-text text-truncate"><%= vote.article.text %></p>
+    <p class="card-text "><small class="text-muted"><%= link_to 'Read more', article_path(vote.article), class: 'readmore' %></small></p>
+  </div>
+  <% end %>
+</div>
+<div class="categories">
+  
+  <% recent_article.each do |article| %>
+  <div class="card bg-dark border-0" text-white style="width: 16.66%;">
+  <% if article.most_recent_article&.header_image %>
+        <%= image_tag article.most_recent_article&.header_image, class: "card-img" %>
+     <% end %>
+
+  <div class="card-img-overlay border-0 catext">
+    <h5 class="card-title"><%= article.name %></h5>
+
+    <p class="card-text font-weight-bold"><%= article.most_recent_article.present? ? article.most_recent_article&.title : '' %></p>
+  </div>
+
+</div>
+<% end %>
+</div>
