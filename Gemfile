@@ -35,14 +35,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'acts_as_votable'
+gem 'azure-storage'
+gem 'azure-storage-blob'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'chosen-rails', '~> 1.9'
 gem 'faker', '~> 2.14'
 gem 'font-awesome-sass'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'jquery-rails'
-gem 'azure-storage'
-gem 'azure-storage-blob'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
