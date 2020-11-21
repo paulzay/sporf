@@ -1,6 +1,6 @@
-FactoryBot.define do
-  factory :tagging do
-    tag { nil }
-    article { nil }
-  end
-end
+# FactoryBot.define do
+#   factory :tagging do
+#     tag { nil }
+#     article { nil }
+#   end
+# end
