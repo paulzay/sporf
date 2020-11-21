@@ -1,26 +1,22 @@
 <div class="articles">
 <% @articles.each do |article| %>
-  <div class="card mb-0 border-0" style="width: 50%">
+  <div class="card mb-0 border-0 h-100" style="width: 50%">
     
-    <div class="row no-gutters">
-      <div class="col-md-4">
+    <div class="arts">
+      <div class="img_div">
         <%= image_tag article.header_image, class: 'card-img'%>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          
+      <div class="art-body" >
+        <div class="card-body">     
           <h5 class="card-title font-weight-bold"><%= article.category.name %></h5>
           <h4 class='card-text font-weight-bold'><%= article.title %></h4>
           <p class="card-text text-truncate"><%= article.text %></p>
-          <p class="card-text text-truncate"><%= article.author.name %></p>
-          <p class="card-text"><small class="text-muted"><%= link_to 'Read more', article_path(article), class: 'readmore' %></small></p>
-          <div>
-
-        <span class= "ml-3"><%= pluralize(article.votes.count, 'Vote') %></span>
-      
-      </div>
+          <p class="card-text text-truncate">By <%= article.author.name %></p>
+          <div class="mut">
+            <p class="card-text"><small class="text-muted"><%= link_to 'Read more', article_path(article), class: 'readmore' %></small></p>
+            <span class= "votes"><%= pluralize(article.votes.count, 'Vote') %></span>
+          </div>
         </div>
-
       </div>
     </div>
     
