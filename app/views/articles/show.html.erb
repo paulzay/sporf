@@ -1,11 +1,13 @@
 <div class= 'article'>
 	<h1 class="title"><%= @article.title%></h1>
-  <p><%= @article.author.name %></p>
+  	<p> By <%= @article.author.name %></p>
 	<div class= 'img-article'>
 	  <%= image_tag @article.header_image, class: 'style_image'%>
 	</div>
 
-	<p class="container"><%= @article.text%></p>
+	<div class="container-text container">
+		<%= markdown(@article.text)%>
+	</div>
 	<div class="likes">
 		<p><%= @article.votes.count %> <%= vote_count %></p>
 		<% if logged_in? %>
