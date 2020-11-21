@@ -3,7 +3,7 @@
 > This is a website for writing sports-related articles based on the different categories given.
 
 [![Coverage Status](https://coveralls.io/repos/github/paulzay/sporf/badge.svg?branch=develop)](https://coveralls.io/github/paulzay/sporf?branch=develop)
-![Build Status](https://travis-ci.com/paulzay/sporf.svg?branch=develop)]
+![Build Status](https://travis-ci.com/paulzay/sporf.svg?branch=develop)
 ## Project Features
 - The index page contains the most popular article based on votes by the users. Additionally it displays the most recent article in each category. 
 - A user can create an account and begin writing their own articles and vote on their own article or others'. 
