@@ -54,6 +54,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.6'
   gem 'shoulda-matchers'
+  gem 'coveralls', require: false
 end
 
 group :development do
